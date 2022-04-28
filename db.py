@@ -6,7 +6,7 @@ import sqlalchemy
 
 
 def criar_engine():
-    DATABASE_URL = "postgresql+psycopg2://crawler:crawler@0.0.0.0:5432/get_livros"
+    DATABASE_URL = "postgresql+psycopg2://postgres:crawler@postgres:5432/postgres"
     engine = create_engine(DATABASE_URL)
     return engine
 

@@ -12,7 +12,7 @@ criar_schema()
 @app.post("/salvar-livros/{categoria}")
 def get_livros_bd(categoria:str):
     dados = crawler(categoria)
-    
+    print(dados)
     if type(dados) is list:
         df = pd.DataFrame(dados)
 

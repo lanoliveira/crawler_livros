@@ -12,6 +12,6 @@ COPY . /code
 
 COPY ./requirements.txt requirements.txt
 
-RUN  pip3 install --no-cache-dir --upgrade requirements.txt
+RUN  pip3 install --no-cache-dir --upgrade -r requirements.txt
 
-CMD python main.py
+CMD ["uvicorn", "main:app", "--reload" ,"--host=0.0.0.0"]
